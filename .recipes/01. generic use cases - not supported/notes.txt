@@ -1,0 +1,47 @@
+unsupported cli options:
+========================
+--req-insecure
+--req-secure-honor-server-cipher-order
+--req-secure-ciphers <string>
+--req-secure-protocol <string>
+--req-secure-curve <string>
+--tls
+--tls-pass <filepath>
+
+reason:
+=======
+1. unsupported environment variables
+   * --req-insecure
+       process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0
+2. unsupported http(s) module request options
+   * --req-secure-honor-server-cipher-order
+       opts.honorCipherOrder = true
+   * --req-secure-ciphers <string>
+       opts.ciphers = <string>
+   * --req-secure-protocol <string>
+       opts.secureProtocol = <string>
+   * --req-secure-curve <string>
+       opts.ecdhCurve = <string>
+   * code trace:
+     - http:
+         https://github.com/holepunchto/bare-http1/blob/main/index.js
+         https://github.com/holepunchto/bare-http1/blob/main/lib/client-request.js
+     - https:
+         https://github.com/holepunchto/bare-https/blob/main/index.js
+         https://github.com/holepunchto/bare-https/blob/main/lib/client-request.js
+     - supported opts fields:
+         {agent, method, path, host, port, headers}
+3. unsupported https module socket server options
+   * --tls
+       opts.passphrase = 'HLS-proxy'
+   * --tls-pass <filepath>
+       opts.passphrase = fs.readFileSync(<filepath>, 'utf8')
+   * code trace:
+     - https:
+         https://github.com/holepunchto/bare-https/blob/main/index.js
+         https://github.com/holepunchto/bare-https/blob/main/lib/server.js
+         https://github.com/holepunchto/bare-https/blob/main/lib/socket.js
+     - tls socket:
+         https://github.com/holepunchto/bare-tls/blob/main/index.js
+     - supported opts fields:
+         {isServer, cert, key, host, eagerOpen, allowHalfOpen}

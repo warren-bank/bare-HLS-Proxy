@@ -1,0 +1,94 @@
+{
+  "name": "@warren-bank/bare-hls-proxy",
+  "description": "Bare.js server to proxy HLS video streams",
+  "version":     "3.6.2",
+  "scripts": {
+    "start":     "bare hls-proxy/bin/hlsd.js",
+    "sudo": "sudo bare hls-proxy/bin/hlsd.js"
+  },
+  "bin": {
+    "bare-hlsd": "hls-proxy/bin/hlsd.js"
+  },
+  "dependencies": {
+    "@warren-bank/hls-proxy": "3.6.2",
+    "bare-buffer":            "^3.4.2",
+    "bare-crypto":            "^1.13.0",
+    "bare-http1":             "^4.2.0",
+    "bare-https":             "^2.1.1",
+    "bare-fs":                "^4.5.2",
+    "bare-path":              "^3.0.0",
+    "bare-process":           "^4.2.2",
+    "bare-querystring":       "^1.0.0",
+    "bare-stream":            "^2.7.0",
+    "bare-url":               "^2.3.2",
+    "bare-zlib":              "^1.3.1",
+    "util":                   "^0.12.5"
+  },
+  "imports": {
+    "node:buffer":            "bare-buffer",
+    "node:crypto":            "bare-crypto",
+    "node:http":              "bare-http1",
+    "node:https":             "bare-https",
+    "node:fs":                "bare-fs",
+    "node:path":              "bare-path",
+    "node:process":           "bare-process",
+    "node:querystring":       "bare-querystring",
+    "node:stream":            "bare-stream",
+    "node:url":               "bare-url",
+    "node:util":              "util",
+    "node:zlib":              "bare-zlib",
+
+    "node:buffer/*":          "bare-buffer/*",
+    "node:crypto/*":          "bare-crypto/*",
+    "node:http/*":            "bare-http1/*",
+    "node:https/*":           "bare-https/*",
+    "node:fs/*":              "bare-fs/*",
+    "node:path/*":            "bare-path/*",
+    "node:process/*":         "bare-process/*",
+    "node:querystring/*":     "bare-querystring/*",
+    "node:stream/*":          "bare-stream/*",
+    "node:url/*":             "bare-url/*",
+    "node:util/*":            "util/*",
+    "node:zlib/*":            "bare-zlib/*",
+
+    "buffer":                 "bare-buffer",
+    "crypto":                 "bare-crypto",
+    "http":                   "bare-http1",
+    "https":                  "bare-https",
+    "fs":                     "bare-fs",
+    "path":                   "bare-path",
+    "process":                "bare-process",
+    "querystring":            "bare-querystring",
+    "stream":                 "bare-stream",
+    "url":                    "bare-url",
+    "util":                   "util",
+    "zlib":                   "bare-zlib",
+
+    "buffer/*":               "bare-buffer/*",
+    "crypto/*":               "bare-crypto/*",
+    "http/*":                 "bare-http1/*",
+    "https/*":                "bare-https/*",
+    "fs/*":                   "bare-fs/*",
+    "path/*":                 "bare-path/*",
+    "process/*":              "bare-process/*",
+    "querystring/*":          "bare-querystring/*",
+    "stream/*":               "bare-stream/*",
+    "url/*":                  "bare-url/*",
+    "util/*":                 "util/*",
+    "zlib/*":                 "bare-zlib/*"
+  },
+  "license": "GPL-2.0",
+  "author": {
+    "name":   "Warren R. Bank",
+    "email":  "warren.r.bank@gmail.com",
+    "url":    "https://github.com/warren-bank"
+  },
+  "homepage": "https://github.com/warren-bank/bare-HLS-Proxy",
+  "repository": {
+    "type":   "git",
+    "url":    "https://github.com/warren-bank/bare-HLS-Proxy"
+  },
+  "bugs": {
+    "url":    "https://github.com/warren-bank/bare-HLS-Proxy/issues"
+  }
+}

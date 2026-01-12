@@ -1,0 +1,18 @@
+# ------------------------------------------------
+# https://github.com/github/linguist
+# https://github.com/github/linguist#vendored-code
+# https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+
+.recipes/* linguist-vendored=true
+
+* linguist-language=JavaScript
+
+# ------------------------------------------------
+
+* text=auto
+
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.sh  text eol=lf
+
+# ------------------------------------------------
