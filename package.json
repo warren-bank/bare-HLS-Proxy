@@ -1,7 +1,7 @@
 {
   "name": "@warren-bank/bare-hls-proxy",
   "description": "Bare.js server to proxy HLS video streams",
-  "version":     "3.6.3",
+  "version":     "3.6.4",
   "scripts": {
     "start":     "bare hls-proxy/bin/hlsd.js",
     "sudo": "sudo bare hls-proxy/bin/hlsd.js"
@@ -10,7 +10,7 @@
     "bare-hlsd": "hls-proxy/bin/hlsd.js"
   },
   "dependencies": {
-    "@warren-bank/hls-proxy": "3.6.3",
+    "@warren-bank/hls-proxy": "3.6.4",
     "bare-buffer":            "^3.4.2",
     "bare-crypto":            "^1.13.0",
     "bare-http1":             "^4.2.2",
