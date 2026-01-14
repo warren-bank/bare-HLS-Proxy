@@ -7,18 +7,21 @@
 
 #### Roadblocks
 
-* [`bare-http1.request()`](https://github.com/holepunchto/bare-http1/issues/32)
+* ~~[`bare-http1.request()`](https://github.com/holepunchto/bare-http1/issues/32)~~
   - solution: issue proposes a one-line fix
-* [`bare-https.request()`](https://github.com/holepunchto/bare-https/issues/2)
+  - fixed: in [v4.2.1](https://github.com/holepunchto/bare-http1/releases/tag/v4.2.1) by [diff](https://github.com/holepunchto/bare-http1/compare/v4.2.0..v4.2.1)
+* ~~[`bare-https.request()`](https://github.com/holepunchto/bare-https/issues/2)~~
   - solution: issue proposes a one-line fix
+  - fixed: in [v2.1.2](https://github.com/holepunchto/bare-https/releases/tag/v2.1.2) by [diff](https://github.com/holepunchto/bare-https/compare/v2.1.1..v2.1.2)
 * [`bare-tcp.Server.listen()`](https://github.com/holepunchto/bare-tcp/issues/13)
   - solution: issue proposes a trivial fix
   - workaround:
     * apply a downstream one-line fix both [here](https://github.com/warren-bank/HLS-Proxy/blob/v3.6.2/hls-proxy/servers/start_http.js#L8) and [here](https://github.com/warren-bank/HLS-Proxy/blob/v3.6.2/hls-proxy/servers/start_https.js#L21)&hellip;
       - old: `server.listen(port,`
       - new: `server.listen(port, '0.0.0.0',`
-* [`bare-http1.ServerResponse.writeHead()`](https://github.com/holepunchto/bare-http1/issues/33)
+* ~~[`bare-http1.ServerResponse.writeHead()`](https://github.com/holepunchto/bare-http1/issues/33)~~
   - solution: issue proposes a one-line fix
+  - fixed: in [v4.2.2](https://github.com/holepunchto/bare-http1/releases/tag/v4.2.2) by [diff](https://github.com/holepunchto/bare-http1/compare/v4.2.1..v4.2.2)
 
 #### TBD
 
