@@ -58,6 +58,13 @@
   - workaround:
     * apply a downstream one-line fix by avoiding the redundant call to [`res.destroy()`](https://github.com/warren-bank/node-denodeify/blob/v2.1.2/denodeify.js#L200) from the `res.on('end')` event listener
     * fixed: in [v2.1.3](https://github.com/warren-bank/node-denodeify/releases/tag/v2.1.3) by [diff](https://github.com/warren-bank/node-denodeify/commit/711ba13ee46b279d295f0513f1fb5f357f66cba1)
+* ~~[`streamx.Pipeline.done()`](https://github.com/warren-bank/bare-HLS-Proxy/issues/1)~~
+  - workaround:
+    * apply a downstream one-line fix [here](https://github.com/warren-bank/node-HLS-Proxy/blob/v3.6.4/hls-proxy/proxy.js#L102)&hellip;
+      ```javascript
+        response.on('error', () => {})
+      ```
+    * fixed: in [v3.6.5](https://github.com/warren-bank/node-HLS-Proxy/releases/tag/v3.6.5) by [diff](https://github.com/warren-bank/node-HLS-Proxy/commit/b27102b5497b5ac34107a5abf7429fd77ecfb922)
 
 - - - -
 
